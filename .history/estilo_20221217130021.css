@@ -21,9 +21,9 @@
   min-height: 100vh;
   grid-template-columns: repeat(
     4,
-    100px
+    50px
   ); /*serve para diividir a linha em 4 colunas a 100px*/
-  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  grid-template-rows: minmax(60px, auto) repeat(5, 50px);
 }
 
 .grid-container > button {
@@ -70,12 +70,16 @@
   font-size: 2.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 425px) {
   .grid-container {
-    grid-template-columns: repeat(4, 70px);
-    grid-template-rows: minmax(90px, auto) repeat(5, 70px);
+    grid-template-columns: repeat(4, 50px);
   }
-  .grid-container > button {
-    font-size: 1rem;
+  .topo-titulo {
+    margin: 10px 0;
+  }
+  .topo-links {
+    width: 100%;
+    border-top: 1px solid #009fa5;
+    justify-content: space-around;
   }
 }

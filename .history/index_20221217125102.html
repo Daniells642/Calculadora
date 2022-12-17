@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="shortcut icon" href="icon-calculator.png" type="image/x-icon" />
+  </head>
+
+  <body class="container-fundo">
+    <div class="grid-container">
+      <div class="output">
+        <div class="previous-operand data-previous-operand"></div>
+        <div class="current-operand data-current-operand"></div>
+      </div>
+
+      <button class="span-two data-all-clear">AC</button>
+      <button id="data-delete">DEL</button>
+      <button class="operator data-operator">÷</button>
+      <button class="data-number">1</button>
+      <button class="data-number">2</button>
+      <button class="data-number">3</button>
+      <button class="operator data-operator">*</button>
+      <button class="data-number">4</button>
+      <button class="data-number">5</button>
+      <button class="data-number">6</button>
+      <button class="operator data-operator">+</button>
+      <button class="data-number">7</button>
+      <button class="data-number">8</button>
+      <button class="data-number">9</button>
+      <button class="operator data-operator">-</button>
+      <button class="span-two data-number">.</button>
+      <button class="data-number">0</button>
+      <button id="data-equals" class="operator">=</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

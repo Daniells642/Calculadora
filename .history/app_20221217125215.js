@@ -58,36 +58,6 @@ class Calculator {
     this.currentOperand = this.currentOperand.toString().slice(0, -1);
   }
 
-  calculate() {
-    let result;
-
-    const _previousOperand = parseFloat(this.previousOperand);
-    const _currentOperand = parseFloat(this.currentOperand);
-
-    if (isNaN(_previousOperand) || isNaN(_currentOperand)) return;
-
-    switch (this.operation) {
-      case "+":
-        result = _previousOperand + _currentOperand;
-        break;
-      case "-":
-        result = _previousOperand - _currentOperand;
-        break;
-      case "÷":
-        result = _previousOperand / _currentOperand;
-        break;
-      case "*":
-        result = _previousOperand * _currentOperand;
-        break;
-      default:
-        return;
-    }
-
-    this.currentOperand = result;
-    this.operation = undefined;
-    this.previousOperand = "";
-  }
-
   adicionarNumber(number) {
     this.currentOperand = `${this.currentOperand}${number.toString()}`;
   }
@@ -133,7 +103,7 @@ allClearButton.addEventListener("click", () => {
   calculator.updateDisplay();
 });
 
-equalsButton.addEventListener("click", () => {
+equalsButton.addEventListener("click", mensagem, () => {
   calculator.calculate();
   calculator.updateDisplay();
 });

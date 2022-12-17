@@ -1,6 +1,6 @@
 const numberButtons = document.querySelectorAll(".data-number");
 const operationButtons = document.querySelectorAll(".data-operator");
-const equalsButton = document.querySelector("#data-equals");
+const equalsButtom = document.querySelector("#data-equals");
 const deleteButton = document.querySelector("#data-delete");
 const allClearButton = document.querySelector(".data-all-clear");
 const previousOperandTextElement = document.querySelector(
@@ -56,36 +56,6 @@ class Calculator {
 
   delete() {
     this.currentOperand = this.currentOperand.toString().slice(0, -1);
-  }
-
-  calculate() {
-    let result;
-
-    const _previousOperand = parseFloat(this.previousOperand);
-    const _currentOperand = parseFloat(this.currentOperand);
-
-    if (isNaN(_previousOperand) || isNaN(_currentOperand)) return;
-
-    switch (this.operation) {
-      case "+":
-        result = _previousOperand + _currentOperand;
-        break;
-      case "-":
-        result = _previousOperand - _currentOperand;
-        break;
-      case "÷":
-        result = _previousOperand / _currentOperand;
-        break;
-      case "*":
-        result = _previousOperand * _currentOperand;
-        break;
-      default:
-        return;
-    }
-
-    this.currentOperand = result;
-    this.operation = undefined;
-    this.previousOperand = "";
   }
 
   adicionarNumber(number) {
